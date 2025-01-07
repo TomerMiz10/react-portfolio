@@ -13,6 +13,7 @@ import {
     faProjectDiagram,
     faCog,
   } from '@fortawesome/free-solid-svg-icons'
+import { applicationRoutes } from '../../utils/constants';
 
 const Sidebar = () => {
     return (
@@ -33,25 +34,25 @@ const Sidebar = () => {
                 <NavLink 
                     end 
                     className={({ isActive }) => isActive ? "about-link" : ""} 
-                    to='/'>
+                    to={applicationRoutes.ABOUT}>
                     <FontAwesomeIcon icon={faUser} color='#4d4d4e'/>
                 </NavLink>
                 <NavLink 
                     end 
                     className={({ isActive }) => isActive ? "skills-link" : ""}
-                    to='/'>
+                    to={applicationRoutes.SKILLS}>
                     <FontAwesomeIcon icon={faCog} color='#4d4d4e'/>
                 </NavLink>
                 <NavLink 
                     end 
                     className={({ isActive }) => isActive ? "projects-link" : ""}
-                    to='/'>
+                    to={applicationRoutes.PROJECTS}>
                     <FontAwesomeIcon icon={faProjectDiagram} color='#4d4d4e'/>
                 </NavLink>
                 <NavLink 
                     end 
                     className={({ isActive }) => isActive ? "contact-link" : ""}
-                    to='/'>
+                    to={applicationRoutes.CONTACT}>
                     <FontAwesomeIcon icon={faEnvelope} color='#4d4d4e'/>
                 </NavLink>
             </nav>
