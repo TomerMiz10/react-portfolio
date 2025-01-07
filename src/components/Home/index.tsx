@@ -15,7 +15,7 @@ const Home = () => {
           setLetterClass('text-animate-hover')
         }, 4000);
         return () => clearTimeout(timeoutId);
-      }, [])
+      }, []);
 
     return (
         <>
