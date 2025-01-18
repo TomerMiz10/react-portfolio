@@ -13,8 +13,10 @@ import {
     faProjectDiagram,
     faCog,
   } from '@fortawesome/free-solid-svg-icons'
+import { applicationRoutes } from '../../utils/constants';
 
 const Sidebar = () => {
+    
     return (
         <div className='nav-bar'>
             <Link 
@@ -26,32 +28,32 @@ const Sidebar = () => {
             <nav>
                 <NavLink 
                     end 
-                    className={({ isActive }) => isActive ? "active" : ""}
+                    className="home-link"
                     to='/' >
                     <FontAwesomeIcon icon={faHome} color='#4d4d4e'/>
                 </NavLink>
                 <NavLink 
                     end 
-                    className={({ isActive }) => isActive ? "about-link" : ""} 
-                    to='/'>
+                    className="about-link"
+                    to={applicationRoutes.ABOUT}>
                     <FontAwesomeIcon icon={faUser} color='#4d4d4e'/>
                 </NavLink>
                 <NavLink 
                     end 
-                    className={({ isActive }) => isActive ? "skills-link" : ""}
-                    to='/'>
+                    className="skills-link"
+                    to={applicationRoutes.SKILLS}>
                     <FontAwesomeIcon icon={faCog} color='#4d4d4e'/>
                 </NavLink>
                 <NavLink 
                     end 
-                    className={({ isActive }) => isActive ? "projects-link" : ""}
-                    to='/'>
+                    className="projects-link"
+                    to={applicationRoutes.PROJECTS}>
                     <FontAwesomeIcon icon={faProjectDiagram} color='#4d4d4e'/>
                 </NavLink>
                 <NavLink 
                     end 
-                    className={({ isActive }) => isActive ? "contact-link" : ""}
-                    to='/'>
+                    className="contact-link"
+                    to={applicationRoutes.CONTACT}>
                     <FontAwesomeIcon icon={faEnvelope} color='#4d4d4e'/>
                 </NavLink>
             </nav>
