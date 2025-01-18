@@ -16,6 +16,7 @@ import {
 import { applicationRoutes } from '../../utils/constants';
 
 const Sidebar = () => {
+    
     return (
         <div className='nav-bar'>
             <Link 
