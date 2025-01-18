@@ -7,7 +7,9 @@ const Skills = () => {
     return (
         <>
             <div className='container skills-page'>
-                <h1>Skills</h1>
+                <div className='text-zone'>
+                    <h1>Skills</h1>
+                </div>
             </div>  
             <Loader type="pacman" active={true} />
         </>
