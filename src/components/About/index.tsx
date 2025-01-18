@@ -65,7 +65,6 @@ const About = () => {
                         <div className="face6">
                             <FontAwesomeIcon icon={faGitAlt} color="#f1502f" />
                         </div>
-                        {/* one more for  node.js*/}
                     </div>
                 </div>
             </div>
