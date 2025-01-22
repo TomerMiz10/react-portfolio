@@ -26,3 +26,11 @@ dist-ssr
 # Git and GitHub
 .git
 .github
+
+# Assets and Images
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.ico
+*.svg

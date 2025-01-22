@@ -7,6 +7,11 @@ function install() {
     npm install
 }
 
+function start() {
+    install
+    npm run dev
+}
+
 function update() {
     npm update
 }
@@ -46,6 +51,9 @@ function logs() {
 case $1 in
     install)
         install
+        ;;
+    start)
+        start
         ;;
     update)
         update
