@@ -22,4 +22,15 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-*.github
+
+# Git and GitHub
+.git
+.github
+
+# Assets and Images
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.ico
+*.svg

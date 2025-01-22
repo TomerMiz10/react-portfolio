@@ -1,7 +1,9 @@
-$primary-color: #ffd700;
-
-@import 'animate.css';
-// @import '~loaders.css/src/animations/pacman.scss';
+@use "sass:math";
+@use "./styles/variables" as *;
+@use "./styles/mixins" as *;
+@use "./styles/functions" as *;
+@use "./styles/pacman" as *;
+@use "animate.css";
 
 @font-face {
   font-family: 'Helvetica Neue';

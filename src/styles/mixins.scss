@@ -1,0 +1,19 @@
+@use "variables" as *;
+
+@mixin pacman_design() {
+  width: 0px;
+  height: 0px;
+  border-right: $size solid transparent;
+  border-top: $size solid $primary-color;
+  border-left: $size solid $primary-color;
+  border-bottom: $size solid $primary-color;
+  border-radius: $size;
+}
+
+@mixin ball-placement($n:3, $start:0) {
+  @for $i from $start through $n {
+    > div:nth-child(#{$i + 2}) {
+      animation: pacman-balls 1s delay(.33s, $n, $i) infinite linear;
+    }
+  }
+}

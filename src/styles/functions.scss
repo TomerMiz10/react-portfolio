@@ -1,0 +1,5 @@
+@use "sass:math";
+
+@function delay($duration, $count, $index) {
+  @return ($duration / $count) * $index;
+}
