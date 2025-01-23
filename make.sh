@@ -20,6 +20,10 @@ function pullOrigin() {
     git pull origin master
 }
 
+function createPR () {
+    ./.github/pr_workflows/create_pr.sh
+}
+
 function build {
     docker-compose build
 }
@@ -54,6 +58,9 @@ case $1 in
         ;;
     start)
         start
+        ;;
+    createPR)
+        createPR
         ;;
     update)
         update
