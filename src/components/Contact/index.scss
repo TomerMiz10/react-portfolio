@@ -8,14 +8,16 @@
         display: grid;
         grid-template-columns: 1fr;
         gap: 2rem;
-        width: 100%;
-        margin: 20px auto;
+        width: 60%;
+        margin: 20px ;
 
         .contact-form {
             background: rgba(255, 255, 255, 0.1);
             border-radius: 10px;
             padding: 1.5rem;
             transition: all 0.3s ease;
+            animation: fadeInUp 1s 1s;
+            animation-fill-mode: forwards;
 
             
             &:hover {
@@ -37,23 +39,22 @@
 
                 .input-field,
                 .input-field-message {
-                    width: 30%;
+                    width: 60%;
                     padding: 0.5rem;
                     border-radius: 5px;
                     border: none;
                     font-size: 1.5rem;
-
+                    background: rgba(255, 255, 255, 0.3);
+                    
+                    &::placeholder {
+                        color: white;
+                    }
                 }
                 
                 .input-field-message {
                     height: 100px;
-
-                    &::placeholder {
-                        color: grey;
-                    }
                 }
             }
-
             
             .sendBtn {
                 background-color: #ffd700;

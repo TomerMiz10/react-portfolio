@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import AnimatedLetters from '../AnimatedLetters';
 import './index.scss';
 import Loader from 'react-loaders';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
     const [letterClass, setLetterClass] = useState('text-animate');
@@ -13,6 +14,18 @@ const Contact = () => {
         }, 3000);
         return () => clearTimeout(timeoutId);
     }, []);
+
+    const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+        event.preventDefault();
+
+        const formData = new FormData(event.currentTarget);
+        const data = {
+            name: formData.get('name'),
+            email: formData.get('email'),
+            message: formData.get('message'),
+        };
+        console.log("Form submitted: ", data);
+    };
 
     return (
         <>
@@ -27,12 +40,13 @@ const Contact = () => {
                     </h1>
 
                     <section className="contact-container">
-                        <form action="" className="contact-form">
+                        <form onSubmit={handleSubmit} className="contact-form">
                             <div className="input-box">
                                 <label>Full Name</label>
                                 <input 
                                     required 
-                                    type="text" 
+                                    type="text"
+                                    name='name' 
                                     className="input-field" 
                                     placeholder='Enter your name' 
                                 />
@@ -41,7 +55,8 @@ const Contact = () => {
                                 <label>Email Address</label>
                                 <input 
                                     required 
-                                    type="text" 
+                                    type="email"
+                                    name="email"
                                     className="input-field" 
                                     placeholder='Enter your email' 
                                 />
@@ -50,7 +65,7 @@ const Contact = () => {
                                 <label>Your Message</label>
                                 <textarea 
                                     required 
-                                    name="" 
+                                    name="message" 
                                     id="" 
                                     className="input-field-message"
                                     placeholder='Enter your message'
