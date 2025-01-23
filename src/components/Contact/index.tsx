@@ -25,6 +25,44 @@ const Contact = () => {
                             idx={9} 
                         />
                     </h1>
+
+                    <section className="contact-container">
+                        <form action="" className="contact-form">
+                            <div className="input-box">
+                                <label>Full Name</label>
+                                <input 
+                                    required 
+                                    type="text" 
+                                    className="input-field" 
+                                    placeholder='Enter your name' 
+                                />
+                            </div>
+                            <div className="input-box">
+                                <label>Email Address</label>
+                                <input 
+                                    required 
+                                    type="text" 
+                                    className="input-field" 
+                                    placeholder='Enter your email' 
+                                />
+                            </div>
+                            <div className="input-box">
+                                <label>Your Message</label>
+                                <textarea 
+                                    required 
+                                    name="" 
+                                    id="" 
+                                    className="input-field-message"
+                                    placeholder='Enter your message'
+                                />
+                                <button 
+                                    type="submit" 
+                                    className="sendBtn">
+                                    Send Message
+                                </button>
+                            </div>
+                        </form>
+                    </section>
                 </div>
             </div>
             <Loader type="pacman" active={true} />
