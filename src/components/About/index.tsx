@@ -33,11 +33,11 @@ const About = () => {
 
                             <p>
                                 My name is Tomer Mizrahi, and I am a highly motivated Junior Software Developer, with 
-                                a B.Sc. degree in Computer Science at the 
+                                a B.Sc. degree in Computer Science at the &nbsp;
                                 <a href="https://www.colman.ac.il" target="_blank" rel="noopener noreferrer">
-                                    &nbsp;College of Management Academic Studies&nbsp;
+                                    College of Management Academic Studies
                                 </a>
-                                 in&nbsp; 
+                                &nbsp;in&nbsp; 
                                 <span className='inline-flag'>&nbsp;
                                     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Flag_of_Israel.svg/1280px-Flag_of_Israel.svg.png" alt="Israel Flag" />
                                 </span>
