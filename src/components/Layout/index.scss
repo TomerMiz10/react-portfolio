@@ -59,7 +59,7 @@
     top: 30%;
     margin-top: 50px;
     transform: translateY(-50%);
-    width: 60%;
+    width: 80%;
     vertical-align: middle;
     display: table-cell;
   }
@@ -72,7 +72,7 @@
 }
 
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1300px) {
   .page {
     position: initial;
   }
@@ -142,7 +142,7 @@
 
     .page {
       position: relative;
-      margin-top: 60px;
+      margin-top: 100px;
       padding: 20px;
       width: 100%;
       height: calc(100vh - 60px);
