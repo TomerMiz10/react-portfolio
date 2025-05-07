@@ -6,7 +6,7 @@
     margin-left: 0;
     position: absolute;
     right: 0;
-    overflow: hidden;
+    overflow: visible; // Changed from hidden to visible to prevent cutoff
   }
   
   .cubespinner {
@@ -104,4 +104,104 @@
   position: absolute;
   bottom: 0;
   width: 100%;
+}
+
+.text-content {
+  width: 50%;
+}
+
+@media (min-width: 1200px) and (max-width: 1300px) {
+  .text-zone {
+    margin-left: 15% !important; // Increased margin and added !important to override other styles
+    z-index: 1;
+    width: 60% !important; // Limit width to give more space for the cube
+  }
+
+  .stage-cube-cont {
+    padding-top: 18%; // Adjusted padding to better position the cube
+    width: 28%; // Slightly reduced width
+  }
+}
+
+// New media query for mid-sized screens
+@media (min-width: 769px) and (max-width: 1199px) {
+  .stage-cube-cont {
+    width: 35%;
+    padding-top: 20%;
+  }
+
+  .cubespinner {
+    transform-origin: 75px 75px 0; // Scale down the cube
+    margin-left: calc(50% - 75px);
+    
+    div {
+      width: 150px; // Smaller cube for medium screens
+      height: 150px;
+      font-size: 75px;
+    }
+
+    .face1 { transform: translateZ(75px); }
+    .face2 { transform: rotateY(90deg) translateZ(75px); }
+    .face3 { transform: rotateY(90deg) rotateX(90deg) translateZ(75px); }
+    .face4 { transform: rotateY(180deg) rotateZ(90deg) translateZ(75px); }
+    .face5 { transform: rotateY(-90deg) rotateZ(90deg) translateZ(75px); }
+    .face6 { transform: rotateX(-90deg) translateZ(75px); }
+
+    .face5 img {
+      width: 75px;
+      height: 75px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .about-page {
+    height: auto; // Allow the page to expand in height
+    min-height: 100vh; // Ensure minimum height
+    display: flex;
+    flex-direction: column;
+  }
+
+  .text-zone {
+    position: relative !important; // Override the absolute positioning
+    width: 90% !important; // Ensure text-zone takes most of the screen width
+    margin: 0 auto !important; // Center the text-zone
+    left: 0 !important; // Reset left position
+    top: 0 !important; // Reset top position
+    transform: none !important; // Remove transform
+    padding-top: 50px; // Add some space at the top
+  }
+
+  .stage-cube-cont {
+    position: relative;
+    width: 80%; // Wider on mobile
+    height: 300px; // Fixed height to ensure visibility
+    margin: 40px auto; // Center the cube below text with spacing
+    padding-top: 0;
+    top: auto; // Remove top positioning
+    right: auto; // Remove right positioning
+  }
+
+  .cubespinner {
+    transform-origin: 50px 50px 0; // Scale down for mobile
+    margin-left: calc(50% - 50px);
+    
+    div {
+      width: 100px;
+      height: 100px;
+      font-size: 50px;
+    }
+
+    .face1 { transform: translateZ(50px); }
+    .face2 { transform: rotateY(90deg) translateZ(50px); }
+    .face3 { transform: rotateY(90deg) rotateX(90deg) translateZ(50px); }
+    .face4 { transform: rotateY(180deg) rotateZ(90deg) translateZ(50px); }
+    .face5 { transform: rotateY(-90deg) rotateZ(90deg) translateZ(50px); }
+    .face6 { transform: rotateX(-90deg) translateZ(50px); }
+
+    .face5 img {
+      width: 50px;
+      height: 50px;
+    }
+  }
 }
