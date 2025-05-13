@@ -3,5 +3,6 @@ export const applicationRoutes = {
     ABOUT: "/about",
     SKILLS: "/skills",
     PROJECTS: "/projects",
+    EXPERIENCE: "/experience",
     CONTACT: "/contact"
 };

@@ -11,6 +11,7 @@ import {
     faUser,
     faEnvelope,
     faProjectDiagram,
+    faBriefcase,
     faCog,
   } from '@fortawesome/free-solid-svg-icons'
 import { applicationRoutes } from '../../utils/constants';
@@ -49,6 +50,12 @@ const Sidebar = () => {
                     className="projects-link"
                     to={applicationRoutes.PROJECTS}>
                     <FontAwesomeIcon icon={faProjectDiagram} color='#4d4d4e'/>
+                </NavLink>
+                <NavLink 
+                    end 
+                    className="experience-link"
+                    to={applicationRoutes.EXPERIENCE}>
+                    <FontAwesomeIcon icon={faBriefcase} color='#4d4d4e'/>
                 </NavLink>
                 <NavLink 
                     end 

@@ -1,6 +1,6 @@
 .nav-bar {
     background: #181818;
-    width: 70px;
+    width: 80px;
     height: 100%;
     position: absolute;
     top: 0;
@@ -89,6 +89,12 @@ nav {
     &.projects-link {
       &:after {
         content: 'PROJECTS';
+      }
+    }
+
+    &.experience-link {
+      &:after {
+        content: 'EXPERIENCE';
       }
     }
 
