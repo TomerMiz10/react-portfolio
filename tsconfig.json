@@ -4,9 +4,10 @@
     { "path": "./tsconfig.app.json" },
     { "path": "./tsconfig.node.json" }
   ],
-
-  "baseUrl": "./",
-  "paths": {
-    "@assets/*": ["src/assets/*"]
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "@assets/*": ["src/assets/*"]
+    }
   }
 }

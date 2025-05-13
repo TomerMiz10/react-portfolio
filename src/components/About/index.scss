@@ -6,7 +6,7 @@
     margin-left: 0;
     position: absolute;
     right: 0;
-    overflow: hidden;
+    overflow: visible; // Changed from hidden to visible to prevent cutoff
   }
   
   .cubespinner {
@@ -104,4 +104,8 @@
   position: absolute;
   bottom: 0;
   width: 100%;
+}
+
+.text-content {
+  width: 50%;
 }
