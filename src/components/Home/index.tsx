@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import './index.scss';
-import LogoT from '../../assets/logo/t-capital-png-no-bg.png';
+import LogoT from 'react-portfolio/t-capital-png-no-bg.png';
 import AnimatedLetters from '../AnimatedLetters';
 import Logo from './Logo/index.tsx';
 
@@ -13,7 +13,7 @@ const Home = () => {
     useEffect(() => {
         const timeoutId = setTimeout(() => {
           setLetterClass('text-animate-hover')
-        }, 4000);
+        }, import.meta.env.VITE_ANIMATION_DELAY_MS);
         return () => clearTimeout(timeoutId);
       }, []);
 

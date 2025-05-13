@@ -1,64 +1,34 @@
-// Programming Languages
-import pythonLogo from '@assets/images/python-logo-svg.svg';
-import javascriptLogo from '@assets/images/javascript-logo-svg.svg';
-import typescriptLogo from '@assets/images/Typescript_logo.svg';
-import javaLogo from '@assets/images/java-logo-svg.svg';
-import cppLogo from '@assets/images/c-plus-plus-logo-svg.svg';
-import csharpLogo from '@assets/images/c-sharp-16-logo-svg.svg';
-
-// Frontend
-import reactLogo from '@assets/images/react.svg';
-import nextjsLogo from '@assets/images/next-js-logo-svg.svg';
-import htmlLogo from '@assets/images/html-5-logo-svg.svg';
-import cssLogo from '@assets/images/css-3-logo-svg.svg';
-
-// Backend
-import nodejsLogo from '@assets/images/node-js-logo-svg.svg';
-import expressLogo from '@assets/images/express-js-logo-svg.svg';
-import nestjsLogo from '@assets/images/nest-js-logo-svg.svg';
-
-// Databases
-import mysqlLogo from '@assets/images/mysql-logo-svg.svg';
-import mongoLogo from '@assets/images/mongo-logo-svg.svg';
-import postgresqlLogo from '@assets/images/postgresql-logo-svg.svg';
-
-// DevOps
-import awsLogo from '@assets/images/aws-logo-svg.svg';
-import dockerLogo from '@assets/images/docker-logo-svg.svg';
-import ansibleLogo from '@assets/images/ansible-logo-svg.svg';
-import terraformLogo from '@assets/images/terraform-logo-svg.svg';
-import gitActionsLogo from '@assets/images/git-logo.png';
-
+const baseUrl = '/react-portfolio';
 export const logos = {
   languages: {
-    python: pythonLogo,
-    javascript: javascriptLogo,
-    typescript: typescriptLogo,
-    java: javaLogo,
-    cpp: cppLogo,
-    csharp: csharpLogo
+    python: `${baseUrl}/images/python-logo-svg.svg`,
+    javascript: `${baseUrl}/images/javascript-logo-svg.svg`,
+    typescript: `${baseUrl}/images/Typescript_logo.svg`,
+    java: `${baseUrl}/images/java-logo-svg.svg`,
+    cpp: `${baseUrl}/images/c-plus-plus-logo-svg.svg`,
+    csharp: `${baseUrl}/images/c-sharp-16-logo-svg.svg`
   },
   frontend: {
-    react: reactLogo,
-    nextjs: nextjsLogo,
-    html: htmlLogo,
-    css: cssLogo
+    react: `${baseUrl}/images/react.svg`,
+    nextjs: `${baseUrl}/images/next-js-logo-svg.svg`,
+    html: `${baseUrl}/images/html-5-logo-svg.svg`,
+    css: `${baseUrl}/images/css-3-logo-svg.svg`
   },
   backend: {
-    nodejs: nodejsLogo,
-    express: expressLogo,
-    nestjs: nestjsLogo
+    nodejs: `${baseUrl}/images/node-js-logo-svg.svg`,
+    express: `${baseUrl}/images/express-js-logo-svg.svg`,
+    nestjs: `${baseUrl}/images/nest-js-logo-svg.svg`
   },
   databases: {
-    mysql: mysqlLogo,
-    mongodb: mongoLogo,
-    postgresql: postgresqlLogo
+    mysql: `${baseUrl}/images/mysql-logo-svg.svg`,
+    mongodb: `${baseUrl}/images/mongo-logo-svg.svg`,
+    postgresql: `${baseUrl}/images/postgresql-logo-svg.svg`
   },
   devops: {
-    aws: awsLogo,
-    docker: dockerLogo,
-    ansible: ansibleLogo,
-    terraform: terraformLogo,
-    gitActions: gitActionsLogo
+    aws: `${baseUrl}/images/aws-logo-svg.svg`,
+    docker: `${baseUrl}/images/docker-logo-svg.svg`,
+    ansible: `${baseUrl}/images/ansible-logo-svg.svg`,
+    terraform: `${baseUrl}/images/terraform-logo-svg.svg`,
+    gitActions: `${baseUrl}/images/git-logo.png`
   }
 };

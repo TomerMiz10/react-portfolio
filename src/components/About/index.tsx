@@ -3,7 +3,7 @@ import AnimatedLetters from '../AnimatedLetters';
 import './index.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCss3, faGitAlt, faHtml5, faJsSquare, faReact } from '@fortawesome/free-brands-svg-icons';
-import Typescript_logo from '@assets/images/Typescript_logo.svg';
+import Typescript_logo from '/react-portfolio/images/Typescript_logo.svg';
 import Loader from 'react-loaders';
 
 const About = () => {
@@ -13,7 +13,7 @@ const About = () => {
     useEffect(() => {
         const timeoutId = setTimeout(() => {
             setLetterClass('text-animate-hover')
-        }, import.meta.env.ANIMATION_DELAY_MS);
+        }, import.meta.env.VITE_ANIMATION_DELAY_MS);
         return () => clearTimeout(timeoutId);
     }, []);
     
