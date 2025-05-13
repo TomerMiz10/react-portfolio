@@ -8,13 +8,13 @@
         display: grid;
         grid-template-columns: 1fr;
         gap: 2rem;
-        width: 60%;
-        margin: 20px ;
+        width: 80%;
+        margin: 20px;
 
         .contact-form {
             background: rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
-            padding: 1.5rem;
+            border-radius: 15px;
+            padding: 2rem;
             transition: all 0.3s ease;
             animation: fadeInUp 1s 1s;
             animation-fill-mode: forwards;
@@ -39,7 +39,7 @@
 
                 .input-field,
                 .input-field-message {
-                    width: 60%;
+                    width: 100%;
                     padding: 0.5rem;
                     border-radius: 5px;
                     border: none;
@@ -49,6 +49,10 @@
                     &::placeholder {
                         color: white;
                     }
+                    
+                    &:focus {
+                        outline: 2px solid #ffd700;
+                    }
                 }
                 
                 .input-field-message {
@@ -56,20 +60,83 @@
                 }
             }
             
+            .button-container {
+                display: flex;
+                justify-content: center;
+                margin-top: 20px;
+            }
+            
             .sendBtn {
                 background-color: #ffd700;
                 color: #333;
-                padding: 0.5rem 1rem;
+                padding: 0.8rem 2rem;
                 border: none;
                 border-radius: 5px;
                 font-size: 1.1rem;
                 cursor: pointer;
-                transition: background-color 0.3s ease;
+                transition: all 0.3s ease;
+                min-width: 180px;
+                text-align: center;
 
                 &:hover {
                     background-color: #e6b800;
+                    transform: translateY(-2px);
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
                 }
+                
+                &:disabled {
+                    background-color: #cccccc;
+                    cursor: not-allowed;
+                    transform: none;
+                    box-shadow: none;
+                }
+                
+                &[aria-busy="true"] {
+                    position: relative;
+                    padding-right: 2.5rem;
+                    
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        right: 1rem;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        width: 1rem;
+                        height: 1rem;
+                        border: 2px solid transparent;
+                        border-top-color: #333;
+                        border-radius: 50%;
+                        animation: spin 1s linear infinite;
+                    }
+                }
+            }
+
+            .error-message {
+                color: #ff6b6b;
+                margin-top: 10px;
+                font-size: 1rem;
+                text-align: center;
+                padding: 0.5rem;
+            }
+        }
+        
+        .success-message {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+            animation: fadeInUp 1s;
+            
+            p {
+                color: #4ecca3;
+                font-size: 1.2rem;
+                margin-bottom: 1.5rem;
             }
         }
     }
+}
+
+@keyframes spin {
+    0% { transform: translateY(-50%) rotate(0deg); }
+    100% { transform: translateY(-50%) rotate(360deg); }
 }
