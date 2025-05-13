@@ -10,7 +10,7 @@ const Experience = () => {
     useEffect(() => {
         const timeoutId = setTimeout(() => {
             setLetterClass('text-animate-hover')
-        }, 3000);
+        }, import.meta.env.ANIMATION_DELAY_MS);
         return () => clearTimeout(timeoutId);
     }, []);
 
