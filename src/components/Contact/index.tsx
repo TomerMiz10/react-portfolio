@@ -6,9 +6,6 @@ import { useContactForm } from './useContactForm';
 import FormField from './FormField';
 
 const Contact = () => {
-    // Constants for animation timing
-    const ANIMATION_DELAY_MS = 3000;
-    
     const [letterClass, setLetterClass] = useState('text-animate');
     const contactArray = ['C', 'o', 'n', 't', 'a', 'c', 't', ' ', 'M', 'e'];
     const { formRef, formStatus, handleSubmit, resetForm } = useContactForm();
