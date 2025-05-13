@@ -1,0 +1,15 @@
+.experience-page {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    margin-top: 10%;
+
+    .experience-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        width: 60%;
+        margin: 20px ;
+
+    }
+}
