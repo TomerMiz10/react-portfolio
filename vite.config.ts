@@ -11,4 +11,7 @@ export default defineConfig({
       '@assets': path.resolve(__dirname, 'src/assets'),
     },
   },
+  build: {
+    assetsInlineLimit: 0,
+  },
 })
