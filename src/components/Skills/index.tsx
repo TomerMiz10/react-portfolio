@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import AnimatedLetters from '../AnimatedLetters';
 import './index.scss';
 import Loader from 'react-loaders';
-import { logos } from './logosImportConfig.ts';
+import { logos } from './skillsLogosImportConfig.ts';
 
 const Skills = () => {
     const [letterClass, setLetterClass] = useState('text-animate');

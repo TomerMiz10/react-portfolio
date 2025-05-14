@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import './index.scss';
-// import LogoT from 'react-portfolio/logo/t-capital-png-no-bg.png';
+import LogoT from '../../assets/logo/t-capital-png-no-bg.png';
 import AnimatedLetters from '../AnimatedLetters';
 import Logo from './Logo/index.tsx';
 
@@ -27,7 +27,7 @@ const Home = () => {
                         <br />
                         <span className={`${letterClass} _13`}>I</span>
                         <span className={`${letterClass} _14`}>'m</span>
-                        <img className='logo' src={'/react-portfolio/logo/t-capital-png-no-bg.png'} alt='Software Engineer' />
+                        <img className='logo' src={LogoT} alt='Software Engineer' />
                         <AnimatedLetters letterClass={letterClass} strArray={nameArray} idx={8} />
                         <br />
                         <AnimatedLetters letterClass={letterClass} strArray={jobArray} idx={nameArray.length} />

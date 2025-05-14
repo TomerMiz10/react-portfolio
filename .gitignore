@@ -28,9 +28,9 @@ dist-ssr
 .github
 
 # Assets and Images
-*.png
-*.jpg
-*.jpeg
-*.gif
-*.ico
-*.svg
+# *.png
+# *.jpg
+# *.jpeg
+# *.gif
+# *.ico
+# *.svg
