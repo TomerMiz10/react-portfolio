@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import './index.scss';
-import LogoT from '../../assets/logo/t-capital-png-no-bg.png';
+import LogoT from '../../assets/images/t-capital.png';
 import AnimatedLetters from '../AnimatedLetters';
 import Logo from './Logo/index.tsx';
 

@@ -1,5 +1,5 @@
 import { useRef} from 'react';
-import LogoTM from '../../../assets/logo/tm-logo-png-no-bg.svg';
+import LogoTM from '../../../assets/images/tm-logo.png';
 import './index.scss';
 
 const Logo = () => {
@@ -11,7 +11,7 @@ const Logo = () => {
           <img 
             className='solid-logo'
             ref={solidLogoRef}
-            src={LogoTM} 
+            src={LogoTM}
             alt='TM' />
       </div>
     );
