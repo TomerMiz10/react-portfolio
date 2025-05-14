@@ -3,7 +3,9 @@ import AnimatedLetters from '../AnimatedLetters';
 import './index.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCss3, faGitAlt, faHtml5, faJsSquare, faReact } from '@fortawesome/free-brands-svg-icons';
-import Typescript_logo from '../../assets/images/typescript-logo.png';
+import Typescript_logo from '@assets/images/typescript-logo.png';
+console.log('Typescript_logo path:', Typescript_logo);
+
 import Loader from 'react-loaders';
 
 const About = () => {
@@ -69,7 +71,7 @@ const About = () => {
                             <FontAwesomeIcon icon={faReact} color="#61DBFB" />
                         </div>
                         <div className="face5">
-                            <img  src={Typescript_logo} color="#007ACC" />
+                            <img  src={Typescript_logo} color="#007ACC" alt='Typescript'/>
                         </div>
                         <div className="face6">
                             <FontAwesomeIcon icon={faGitAlt} color="#f1502f" />
