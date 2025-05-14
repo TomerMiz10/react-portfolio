@@ -1,8 +1,8 @@
 import { Project } from "./projectInterfaces";
-import supportaiLogoColorPng from '../../assets/projects/supportai-logo-color.png';
-import podifyLogo from '../../assets/projects/podify-logo-hero.png';
-import stoicreadsLogo from '../../assets/projects/stoicreads-logo.png';
-import silverwingLogo from '../../assets/projects/silverwing-logo-bw.jpeg';
+import supportaiLogoColorPng from '../../assets/images/projects/supportai-logo-color.png';
+import podifyLogo from '../../assets/images/projects/podify-logo-hero.png';
+import stoicreadsLogo from '../../assets/images/projects/stoicreads-logo.png';
+import silverwingLogo from '../../assets/images/projects/silverwing-logo-bw.jpeg';
 export const projectsData: Project[] = [
     {
         id: 1,
