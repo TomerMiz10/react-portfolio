@@ -1,0 +1,27 @@
+name: Generate Pull Request Description
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+jobs:
+    generate_description:
+        runs-on: ubuntu-latest
+        steps:
+        - name: Checkout repository
+          uses: actions/checkout@v2
+          with:
+            fetch-depth: 0
+
+        - name: Setup permissons for scripts
+          run: chmod +x .github/pr_workflows/*.sh
+
+        - name: Run PR description script
+          run: .github/pr_workflows/create_pr.sh
+
+        - name: Update PR description
+          uses: peter-evans/create-or-update-comment@v3
+          with:
+            issue-number: ${{ github.event.pull_request.number }}
+            body-file: .github/PR_DESCRIPTION.md
+            edit-mode: replace
