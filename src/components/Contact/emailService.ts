@@ -1,4 +1,4 @@
-import emailjs from '@emailjs/browser';
+import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
 
 /**
  * Email service that handles sending emails through EmailJS
@@ -19,9 +19,9 @@ class EmailService {
   /**
    * Send an email using EmailJS
    * @param form - Form element containing the data to send
-   * @returns Promise with the result
+   * @returns Promise with the result from EmailJS
    */
-  public async sendEmail(form: HTMLFormElement): Promise<any> {
+  public async sendEmail(form: HTMLFormElement): Promise<EmailJSResponseStatus> {
     try {
       this.init();
       
