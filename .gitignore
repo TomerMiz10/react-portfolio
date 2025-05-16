@@ -25,10 +25,10 @@ dist-ssr
 
 # Git and GitHub
 .git
-.github/pr_workflows
-.github/CODEOWNERS
-.github/PR_DESCRIPTION.md
-.github/pull_request_template.md
+# .github/pr_workflows
+# .github/CODEOWNERS
+# .github/PR_DESCRIPTION.md
+# .github/pull_request_template.md
 
 # Assets and Images
 # *.png
