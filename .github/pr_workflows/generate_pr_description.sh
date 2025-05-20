@@ -33,7 +33,7 @@ while read -r commit; do
     commit_hash=$(echo $commit | awk '{print $1}')
     author=$(echo $commit | awk '{print $2}')
     commit_message=$(echo $commit | cut -d' ' -f3-)
-    description="${description} - ${commit_message} | (${commit_hash})\n"
+    description="${description} - ${commit_message}. (${commit_hash})\n"
 done <<< "$commits"
 
 # Debug the generated description
