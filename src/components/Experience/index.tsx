@@ -33,6 +33,7 @@ const Experience = () => {
         </div>
         <div className='test'>
           <h1 className="test-header">this is test</h1>
+          <h1 className="test-header">Yeah buddy light weight</h1>
         </div>
       </div>
       <Loader type="pacman" active={true} />

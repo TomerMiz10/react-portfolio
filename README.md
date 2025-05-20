@@ -1,4 +1,7 @@
 # React Portfolio
+![Deploy](https://github.com/TomerMiz10/react-portfolio/actions/workflows/deploy.yml/badge.svg)
+
+C:\Users\Tomer\VS_CodeWorkspace\react-portfolio\.github\workflows\deploy.yml
 
 A modern, responsive portfolio website built with React, TypeScript, and Vite to showcase my skills, projects, and experience.
 
