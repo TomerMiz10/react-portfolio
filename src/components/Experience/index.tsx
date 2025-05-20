@@ -32,7 +32,7 @@ const Experience = () => {
             </section>
         </div>
         <div className='test'>
-          <h1 className="test-header">this is test</h1>
+          <h1 className="test-header">I'm going to be the Pirate King</h1>
           <h1 className="test-header">Yeah buddy light weight</h1>
         </div>
       </div>
