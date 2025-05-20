@@ -5,6 +5,9 @@ on:
     branches:
       - master
 
+permissions:
+  contents: write
+
 jobs:
     build:
         name: Build
@@ -12,16 +15,29 @@ jobs:
 
         steps:
         - name: Checkout repository
-          uses: actions/checkout@v2
+          uses: actions/checkout@v4
 
-        - name: Set up Node.js
+        - name: Set up Node.js environment
           uses: actions/setup-node@v4
+
+        - name: Cache Node.js modules
+          uses: actions/cache@v4
+          with:
+            path: ~/.npm
+            key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+            restore-keys: |
+              ${{ runner.os }}-node-
 
         - name: Install dependencies
           uses: bahmutov/npm-install@v1
 
         - name: Build project
           run: npm run build
+          env:
+            VITE_EMAILJS_PUBLIC_KEY: ${{ secrets.EMAILJS_PUBLIC_KEY }}
+            VITE_EMAILJS_SERVICE_ID: ${{ secrets.EMAILJS_SERVICE_ID }}
+            VITE_EMAILJS_TEMPLATE_ID: ${{ secrets.EMAILJS_TEMPLATE_ID }}
+
 
         - name: Upload production-ready build files
           uses: actions/upload-artifact@v4
