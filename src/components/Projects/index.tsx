@@ -55,7 +55,12 @@ const Projects = () => {
                                         </a>
                                     )}
                                     {project.projectLinks.demoVideo && (
-                                        <a href={project.projectLinks.demoVideo} target="_blank" rel="noreferrer">
+                                        <a
+                                            href={project.projectLinks.demoVideo}
+                                            target="_blank"
+                                            rel="noreferrer"
+                                            title={`Watch demo video of ${project.projectName}`}
+                                        >
                                             <FontAwesomeIcon icon={faVideo} />
                                         </a>
                                     )}
