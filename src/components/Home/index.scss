@@ -1,3 +1,5 @@
+@use '@styles/variables' as *;
+
 .home-page {
     .text-zone {
         position: absolute;
@@ -40,21 +42,21 @@
     }
 
     .flat-button {
-        color: #ffd700;
+        color: $primary-color;
         font-size: 15px;
         font-weight: 400;
         letter-spacing: 4px;
         font-family: sans-serif;
         text-decoration: none;
         padding: 10px 18px;
-        border: 1px solid #ffd700;
+        border: 1px solid $primary-color;
         margin-top: 25px;
         float: left;
         animation: fadeInAnimation 1s 1.8s backwards;
         white-space: nowrap;
     
         &:hover {
-            background: #ffd700;
+            background: $primary-color;
             color: #333;
         }
     }

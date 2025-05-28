@@ -1,3 +1,5 @@
+@use '@styles/variables' as *;
+
 .logo-container {
     z-index: 0;
     width: 400px;  /* Reduced from 500px */
@@ -54,7 +56,7 @@
 
 @keyframes strokeColorChange {
   0% { stroke: #fff; }
-  100% { stroke: #ffd700; }
+  100% { stroke: $primary-color; }
 }
 
 path {

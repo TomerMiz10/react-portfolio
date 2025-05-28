@@ -1,3 +1,5 @@
+@use '@styles/variables' as *;
+
 .nav-bar {
     background: #181818;
     width: 80px;
@@ -44,7 +46,7 @@ nav {
     }
 
     &:hover {
-      color: #ffd700;
+      color: $primary-color;
 
       svg {
         opacity: 0;
@@ -105,7 +107,7 @@ nav {
     }
 
     &:hover {
-      color: #ffd700;
+      color: $primary-color;
 
       svg {
         opacity: 0;
@@ -116,10 +118,10 @@ nav {
       }
 
       &.active {
-        color: #ffd700;
+        color: $primary-color;
         
         svg {
-            color: #ffd700;
+            color: $primary-color;
         }
 
         &:after {
@@ -151,7 +153,7 @@ ul {
 
     &:hover {
       .anchor-icon {
-        color: #ffd700;
+        color: $primary-color;
       }
     }
   }
