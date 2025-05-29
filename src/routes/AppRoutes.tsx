@@ -11,12 +11,12 @@ import { applicationRoutes } from '../utils/constants';
 const AppRoutes = () => (
     <Routes>
         <Route path="/" element={<Layout />}>
-            <Route path={applicationRoutes.HOME} index element={<Home />} />
-            <Route path={applicationRoutes.ABOUT} element={<About />} />
-            <Route path={applicationRoutes.SKILLS} element={<Skills />} />
-            <Route path={applicationRoutes.PROJECTS} element={<Projects />} />
-            <Route path={applicationRoutes.EXPERIENCE} element={<Experience />} />
-            <Route path={applicationRoutes.CONTACT} element={<Contact />} />
+            <Route path={applicationRoutes.home} index element={<Home />} />
+            <Route path={applicationRoutes.about} element={<About />} />
+            <Route path={applicationRoutes.skills} element={<Skills />} />
+            <Route path={applicationRoutes.projects} element={<Projects />} />
+            <Route path={applicationRoutes.experience} element={<Experience />} />
+            <Route path={applicationRoutes.contact} element={<Contact />} />
         </Route>
     </Routes>
 );

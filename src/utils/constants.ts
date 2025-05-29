@@ -1,8 +1,10 @@
-export const applicationRoutes = {
-    HOME: "/",
-    ABOUT: "/about",
-    SKILLS: "/skills",
-    PROJECTS: "/projects",
-    EXPERIENCE: "/experience",
-    CONTACT: "/contact"
+import { ScrollOptions } from "./types/types";
+
+export const applicationRoutes: Record<ScrollOptions, string> = {
+    [ScrollOptions.HOME]: "/",
+    [ScrollOptions.ABOUT]: "/about",
+    [ScrollOptions.SKILLS]: "/skills",
+    [ScrollOptions.PROJECTS]: "/projects",
+    [ScrollOptions.EXPERIENCE]: "/experience",
+    [ScrollOptions.CONTACT]: "/contact",
 };
