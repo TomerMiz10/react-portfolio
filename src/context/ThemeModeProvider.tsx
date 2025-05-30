@@ -12,6 +12,8 @@ const ThemeModeProvider: React.FC<{ children: React.ReactNode }> = ({
     document.body.style.backgroundColor = isDarkMode
       ? darkTheme.body
       : lightTheme.body
+    document.body.classList.remove('light-mode', 'dark-mode')
+    document.body.classList.add(isDarkMode ? 'dark-mode' : 'light-mode')
   }, [isDarkMode])
 
   return (
