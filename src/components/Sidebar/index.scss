@@ -159,6 +159,176 @@ ul {
   }
 }
 
+.theme-toggle-btn {
+  outline: none;
+  transition: color 0.2s;
+
+  &:hover {
+    color: $primary-color;
+  }
+}
+
+.theme-toggle-switch-vertical {
+  width: 38px;
+  height: 64px;
+  border-radius: 24px;
+  position: relative;
+  cursor: pointer;
+  margin: 0 auto 18px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: background 0.4s;
+
+  .toggle-bg-vertical {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 24px;
+    overflow: hidden;
+    z-index: 1;
+    transition: background 0.4s;
+    background: #b3e0ff;
+  }
+
+  &.light .toggle-bg-vertical {
+    background: linear-gradient(180deg, #b3e0ff 60%, #fffbe6 100%);
+  }
+  &.dark .toggle-bg-vertical {
+    background: linear-gradient(180deg, #232752 60%, #181a20 100%);
+  }
+
+  .toggle-stars-vertical {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+    background: transparent;
+    transition: opacity 0.4s;
+  }
+  &.dark .toggle-stars-vertical {
+    display: block;
+    opacity: 1;
+    background:
+      radial-gradient(circle at 10px 10px, #fff 1.5px, transparent 2px),
+      radial-gradient(circle at 30px 40px, #fff 1.2px, transparent 2px),
+      radial-gradient(circle at 20px 20px, #fff 1px, transparent 2px),
+      radial-gradient(circle at 25px 55px, #fff 1.3px, transparent 2px),
+      radial-gradient(circle at 15px 50px, #fff 1.1px, transparent 2px);
+    animation: stars-move 1.5s cubic-bezier(.4,2.2,.2,1);
+  }
+  &.light .toggle-stars-vertical {
+    opacity: 0;
+  }
+
+  @keyframes stars-move {
+    from { opacity: 0; transform: translateY(-10px);}
+    to { opacity: 1; transform: translateY(0);}
+  }
+
+  .toggle-clouds-vertical {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+    background: transparent;
+    transition: opacity 0.4s;
+  }
+  &.light .toggle-clouds-vertical {
+    display: block;
+    opacity: 1;
+    background:
+      radial-gradient(circle at 12px 18px, #fff 8px, transparent 10px),
+      radial-gradient(circle at 26px 30px, #fff 6px, transparent 8px),
+      radial-gradient(circle at 20px 50px, #fff 7px, transparent 9px);
+    animation: clouds-move 1.5s cubic-bezier(.4,2.2,.2,1);
+  }
+  &.dark .toggle-clouds-vertical {
+    opacity: 0;
+  }
+
+  @keyframes clouds-move {
+    from { opacity: 0; transform: translateY(10px);}
+    to { opacity: 1; transform: translateY(0);}
+  }
+
+  .toggle-sun-vertical, .toggle-moon-vertical {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    font-size: 18px;
+    pointer-events: none;
+    transition: opacity 0.4s;
+  }
+  .toggle-sun-vertical {
+    top: 10px;
+    opacity: 1;
+    color: #ffd700;
+    &::before {
+      content: '☀️';
+    }
+  }
+  .toggle-moon-vertical {
+    bottom: 10px;
+    opacity: 0.7;
+    color: #fff;
+    &::before {
+      content: '🌙';
+    }
+  }
+  &.dark .toggle-sun-vertical {
+    opacity: 0;
+  }
+  &.dark .toggle-moon-vertical {
+    opacity: 1;
+  }
+  &.light .toggle-sun-vertical {
+    opacity: 1;
+  }
+  &.light .toggle-moon-vertical {
+    opacity: 0;
+  }
+
+  .toggle-knob-vertical {
+    position: absolute;
+    left: 4px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.12);
+    z-index: 4;
+    transition: top 0.4s cubic-bezier(.4,2.2,.2,1), background 0.4s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    .toggle-icon-vertical {
+      transition: color 0.4s;
+      color: #ffd700;
+    }
+  }
+  &.light .toggle-knob-vertical {
+    top: 4px;
+    background: #fff;
+    .toggle-icon-vertical {
+      color: #ffd700;
+    }
+  }
+  &.dark .toggle-knob-vertical {
+    top: 30px;
+    background: #232752;
+    .toggle-icon-vertical {
+      color: #fff;
+    }
+  }
+}
+
 // @media screen and (max-width: 1200px) {
 //   .nav-bar {
 //     width: 100%;
