@@ -39,8 +39,7 @@
   }
 
   p {
-    font-size: 16px;
-    color: #fff;
+    font-size: 1.6rem;
     font-family: sans-serif;
     font-weight: 300;
     max-width: fit-content;
@@ -84,4 +83,25 @@
   .text-zone {
     transition: all 0.2s ease-out; /* Add smooth transition */
   }
+}
+
+/* Override for About page text-content in light and dark mode */
+body.light-mode 
+.about-page
+.skills-page
+.projects-page
+.experience-page
+.contact-page
+.text-zone .text-content p {
+  color: $text-primary-light !important;
+}
+
+body.dark-mode 
+.about-page 
+.skills-page
+.projects-page
+.experience-page
+.contact-page
+.text-zone .text-content p {
+  color: $text-primary-dark !important;
 }
