@@ -15,3 +15,13 @@
 
     }
 }
+
+body.light-mode .experience-page .experience-container,
+body.light-mode .experience-page .experience-container * {
+  color: $text-primary-light !important;
+}
+
+body.dark-mode .experience-page .experience-container,
+body.dark-mode .experience-page .experience-container * {
+  color: $text-primary-dark !important;
+}

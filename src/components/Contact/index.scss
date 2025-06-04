@@ -138,6 +138,16 @@
     }
 }
 
+body.light-mode .contact-page .contact-container .contact-form label,
+body.light-mode .contact-page .contact-container .success-message p {
+  color: $text-primary-light !important;
+}
+
+body.dark-mode .contact-page .contact-container .contact-form label,
+body.dark-mode .contact-page .contact-container .success-message p {
+  color: $text-primary-dark !important;
+}
+
 @keyframes spin {
     0% { transform: translateY(-50%) rotate(0deg); }
     100% { transform: translateY(-50%) rotate(360deg); }

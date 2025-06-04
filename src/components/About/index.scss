@@ -24,12 +24,11 @@
   width: 50%;
 }
 
-body.light-mode .text-content {
-  color: $text-primary-light;
-  background-color: $body-bg-light;
+body.light-mode .about-page .text-zone .text-content p {
+  color: $text-primary-light !important;
 }
 
-body.dark-mode .text-content {
-  // color: $text-primary-dark;
-  // background-color: $body-bg-dark;
+body.dark-mode .about-page .text-zone .text-content,
+body.dark-mode .about-page .text-zone .text-content p {
+  color: #fff !important;
 }
