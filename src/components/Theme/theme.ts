@@ -21,18 +21,18 @@ export interface Theme extends DefaultTheme {
 }
 
 export const lightTheme: Theme = {
-  body: '#f7f7fa', // softer off-white background
-  navbarBg: '#ffffff', // pure white navbar
-  textPrimary: '#1a1a1a', // darker text for better contrast
-  textSecondary: '#555', // slightly darker secondary text
+  body: '#fafafa',
+  navbarBg: '#e4e5f1',
+  textPrimary: '#222',
+  textSecondary: '#022c43',
   primaryColor: '#ffd700',
   headerPrimary: '#ffd700',
-  headerSecondary: '#1a1a1a', // match textPrimary for headers
-  linkColor: '#e6b800', // slightly deeper gold for links
-  linkHoverColor: '#bfa100', // darker gold on hover
-  cardBg: '#ffffff', // white cards for clarity
-  tagBg: 'rgba(255,215,0,0.12)', // slightly more visible tag background
-  tagText: '#bfa100', // deeper gold for tag text
+  headerSecondary: '#222',
+  linkColor: '#ffd700',
+  linkHoverColor: '#e6b800',
+  cardBg: 'rgba(0,0,0,0.05)',
+  tagBg: 'rgba(255,215,0,0.1)',
+  tagText: '#ffd700',
   inputBorder: '#ffd700',
   buttonBg: '#ffd700',
   buttonHoverBg: '#e6b800',
@@ -41,19 +41,19 @@ export const lightTheme: Theme = {
 };
 
 export const darkTheme: Theme = {
-  body: '#181a20', // softer dark background
-  navbarBg: '#23252b', // slightly lighter than body for navbar
-  textPrimary: '#f7f7fa', // light text for contrast
-  textSecondary: '#b0b3b8', // muted light gray
+  body: '#111222',
+  navbarBg: '#181818',
+  textPrimary: '#E0E0E0',
+  textSecondary: '#B0B0B0',
   primaryColor: '#ffd700',
-  headerPrimary: '#ffd700',
-  headerSecondary: '#ffd700',
+  headerPrimary: '#022c43',
+  headerSecondary: '#E0E0E0',
   linkColor: '#ffd700',
   linkHoverColor: '#e6b800',
-  cardBg: '#23252b', // match navbar for card backgrounds
-  tagBg: 'rgba(255,215,0,0.10)', // subtle gold tag background
+  cardBg: '#1e1e1e',
+  tagBg: 'rgba(255,215,0,0.1)',
   tagText: '#ffd700',
-  inputBorder: '#ffd700',
+  inputBorder: '#444444',
   buttonBg: '#ffd700',
   buttonHoverBg: '#e6b800',
   success: '#4ecca3',

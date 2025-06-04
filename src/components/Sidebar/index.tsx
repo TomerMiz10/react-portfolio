@@ -1,6 +1,6 @@
 import { Link, NavLink } from 'react-router-dom';
 import './index.scss';
-import LogoT from '@assets/images/logo-and-sub2.png';
+import LogoT from '@assets/images/capital-T.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
     faLinkedin,
@@ -23,10 +23,13 @@ const Sidebar = () => {
     if (!themeContext) {
         throw new Error('ThemeModeContext not found');
     }
-    const { isDarkMode, setIsDarkMode } = themeContext;
+    const { isDarkMode, setIsDarkMode, theme } = themeContext; // get theme
 
     return (
-        <div className='nav-bar'>
+        <div
+            className='nav-bar'
+            style={{ background: theme.navbarBg }} // use theme color
+        >
             <Link 
                 className='logo' 
                 to='/'>
@@ -38,37 +41,37 @@ const Sidebar = () => {
                     end 
                     className="home-link"
                     to='/' >
-                    <FontAwesomeIcon icon={faHome} color='#4d4d4e'/>
+                    <FontAwesomeIcon icon={faHome} color={theme.textSecondary}/>
                 </NavLink>
                 <NavLink 
                     end 
                     className="about-link"
                     to={applicationRoutes.about}>
-                    <FontAwesomeIcon icon={faUser} color='#4d4d4e'/>
+                    <FontAwesomeIcon icon={faUser} color={theme.textSecondary}/>
                 </NavLink>
                 <NavLink 
                     end 
                     className="skills-link"
                     to={applicationRoutes.skills}>
-                    <FontAwesomeIcon icon={faCog} color='#4d4d4e'/>
+                    <FontAwesomeIcon icon={faCog} color={theme.textSecondary}/>
                 </NavLink>
                 <NavLink 
                     end 
                     className="projects-link"
                     to={applicationRoutes.projects}>
-                    <FontAwesomeIcon icon={faProjectDiagram} color='#4d4d4e'/>
+                    <FontAwesomeIcon icon={faProjectDiagram} color={theme.textSecondary}/>
                 </NavLink>
                 <NavLink 
                     end 
                     className="experience-link"
                     to={applicationRoutes.experience}>
-                    <FontAwesomeIcon icon={faBriefcase} color='#4d4d4e'/>
+                    <FontAwesomeIcon icon={faBriefcase} color={theme.textSecondary}/>
                 </NavLink>
                 <NavLink 
                     end 
                     className="contact-link"
                     to={applicationRoutes.contact}>
-                    <FontAwesomeIcon icon={faEnvelope} color='#4d4d4e'/>
+                    <FontAwesomeIcon icon={faEnvelope} color={theme.textSecondary}/>
                 </NavLink>
             </nav>
             <ul>
@@ -106,7 +109,7 @@ const Sidebar = () => {
                     >
                         <FontAwesomeIcon
                             icon={faLinkedin}
-                            color="#4d4d4e"
+                            color={theme.textSecondary}
                             className="anchor-icon"
                         />
                     </a>
@@ -119,7 +122,7 @@ const Sidebar = () => {
                     >
                         <FontAwesomeIcon
                         icon={faGithub}
-                        color="#4d4d4e"
+                        color={theme.textSecondary}
                         className="anchor-icon"
                         />
                     </a>
