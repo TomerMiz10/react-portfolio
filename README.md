@@ -1,7 +1,5 @@
 # React Portfolio
-![Deploy](https://github.com/TomerMiz10/react-portfolio/actions/workflows/deploy.yml/badge.svg)
-
-C:\Users\Tomer\VS_CodeWorkspace\react-portfolio\.github\workflows\deploy.yml
+[Check out my portfolio](https://tomermiz10.github.io/react-portfolio/)
 
 A modern, responsive portfolio website built with React, TypeScript, and Vite to showcase my skills, projects, and experience.
 
@@ -45,3 +43,7 @@ src/
 ## 📄 License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
+
+## 💡 Contribution
+
+This is a personal portfolio, but feedback and suggestions are welcome. Please open an issue or contact me directly.
