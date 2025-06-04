@@ -34,6 +34,7 @@
     "react-loaders": "^3.0.1",
     "react-router-dom": "^7.1.1",
     "sass": "^1.88.0",
+    "styled-components": "^6.1.18",
     "web-vitals": "^4.2.4"
   },
   "devDependencies": {
