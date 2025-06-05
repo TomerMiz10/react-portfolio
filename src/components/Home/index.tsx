@@ -36,12 +36,12 @@ const Home = () => {
 
                     </h1>
                     <h2>Full Stack | Backend | Frontend Developer</h2>
-                    {/* <button
+                    <button
                         className="flat-button"
                         onClick={() => scrollToSection('contact')}
                     >
                         CONTACT ME
-                    </button> */}
+                    </button>
                 </div>
                 <Logo />
             </div>
