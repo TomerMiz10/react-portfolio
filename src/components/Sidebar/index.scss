@@ -15,11 +15,11 @@
   
     .logo {
       display: block;
-      padding: 24px 0 8px 0; 
+      padding: 16px 0 8px 0; 
   
       img {
         display: block;
-        margin: 8px auto;
+        margin: 0px auto;
         width: 60px;
         height: auto;
         
@@ -38,12 +38,12 @@
       position: static; // remove absolute positioning
       height: auto;     // let flexbox handle height
 
-      a {
-        font-size: 2.2rem;
+      a, button {
+        font-size: 1.8rem;
         color: #4d4d4e;
         display: block;
-        line-height: 51px;
-        height: 51px;
+        line-height: 50px;
+        height: 40px;
         width: 100%;
         box-sizing: border-box;
         text-align: center;
@@ -52,6 +52,10 @@
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
+        background: none;
+        border: none;
+        padding: 0;
+        margin: 0;
 
         i {
             transition: all 0.3s ease-out;
@@ -75,11 +79,13 @@
             letter-spacing: 2px;
             position: absolute;
             bottom: 0;
+            top: 0;
             display: block;
             width: 100%;
             text-align: center;
             opacity: 0;
             transition: all 0.3s ease-out;
+            font-weight: 600;
         }
         
         &.home-link {
@@ -352,4 +358,21 @@ body.light-mode .nav-bar {
 // Dark mode override (optional, for clarity)
 body.dark-mode .nav-bar {
     background: $navbar-bg-dark;
+}
+
+body.light-mode .nav-bar nav a:hover:after,
+body.light-mode .nav-bar nav button:hover:after {
+  color: $link-hover-color-light;
+}
+
+body.dark-mode .nav-bar nav a:hover:after,
+body.dark-mode .nav-bar nav button:hover:after {
+  color: $link-hover-color-dark;
+}
+
+body.light-mode .nav-bar ul li a:hover .anchor-icon {
+  color: $link-hover-color-light !important;
+}
+body.dark-mode .nav-bar ul li a:hover .anchor-icon {
+  color: $link-hover-color-dark !important;
 }

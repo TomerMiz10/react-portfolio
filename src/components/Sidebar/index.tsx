@@ -30,7 +30,6 @@ const Sidebar = () => {
     return (
         <div
             className='nav-bar'
-            style={{ background: theme.navbarBg }} // use theme color
         >
             <a className='logo' href='#home' onClick={handleHomeClick}>
                 <img className='logo' src={LogoT} alt='Logo'/>
