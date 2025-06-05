@@ -1,3 +1,5 @@
+@use '@styles/variables' as *;
+
 .contact-page {
     width: 100%;
     min-height: 100vh;
@@ -51,7 +53,7 @@
                     }
                     
                     &:focus {
-                        outline: 2px solid #ffd700;
+                        outline: 2px solid $primary-color;
                     }
                 }
                 
@@ -67,7 +69,7 @@
             }
             
             .sendBtn {
-                background-color: #ffd700;
+                background-color: $primary-color;
                 color: #333;
                 padding: 0.8rem 2rem;
                 border: none;
@@ -134,6 +136,16 @@
             }
         }
     }
+}
+
+body.light-mode .contact-page .contact-container .contact-form label,
+body.light-mode .contact-page .contact-container .success-message p {
+  color: $text-primary-light !important;
+}
+
+body.dark-mode .contact-page .contact-container .contact-form label,
+body.dark-mode .contact-page .contact-container .success-message p {
+  color: $text-primary-dark !important;
 }
 
 @keyframes spin {

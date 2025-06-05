@@ -25,7 +25,15 @@
     /* Paths */
     "baseUrl": "./",
     "paths": {
-      "@assets/*": ["src/assets/*"]
+      "@assets/*": ["src/assets/*"],
+      "@components/*": ["src/components/*"],
+      "@context/*": ["src/context/*"],
+      "@hooks/*": ["src/context/hooks/*"],
+      "@routes/*": ["src/routes/*"],
+      "@styles/*": ["src/styles/*"],
+      "@utils/*": ["src/utils/*"],
+      "types/*": ["src/utils/types/*"],
+      "@constants/*": ["src/utils/constants.ts"],
     }
   },
   "include": ["src"]

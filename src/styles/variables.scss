@@ -1,4 +1,46 @@
 @use "sass:math";
 
+// Light Theme Variables
+// --------------------
+$body-bg-light: #fafafa;
+$navbar-bg-light: #e4e5f1;
+$text-primary-light: #022c43;
+$text-secondary-light: #022c43;
+$header-primary-light: #ffd700;
+$header-secondary-light: #222;
+$link-color-light: #ffd700;
+$link-hover-color-light: #2883b5;
+$card-bg-light: rgba(0,0,0,0.05);
+$tag-bg-light: rgba(255,215,0,0.1);
+$tag-text-light: #ffd700;
+$input-border-light: #ffd700;
+$button-bg-light: #ffd700;
+$button-hover-bg-light: #e6b800;
+$success-light: #4ecca3;
+$error-light: #ff6b6b;
+
+// Dark Theme Variables
+// --------------------
+$body-bg-dark: #111222;
+$navbar-bg-dark: #181818;
+$text-primary-dark: #E0E0E0;
+$text-secondary-dark: #B0B0B0;
+$header-primary-dark: #022c43;
+$header-secondary-dark: #E0E0E0;
+$link-color-dark: #ffd700;
+$link-hover-color-dark: #e6b800;
+$card-bg-dark: #1e1e1e;
+$tag-bg-dark: rgba(255,215,0,0.1);
+$tag-text-dark: #ffd700;
+$input-border-dark: #444444;
+$button-bg-dark: #ffd700;
+$button-hover-bg-dark: #e6b800;
+$success-dark: #4ecca3;
+$error-dark: #ff6b6b;
+
+// Common
 $primary-color: #ffd700;
 $size: 25px;
+
+// Home and Sidebar
+$sidebar-width: 80px;

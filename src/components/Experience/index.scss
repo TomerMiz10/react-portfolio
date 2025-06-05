@@ -1,3 +1,5 @@
+@use '@styles/variables' as *;
+
 .experience-page {
     width: 100%;
     min-height: 100vh;
@@ -12,4 +14,14 @@
         margin: 20px ;
 
     }
+}
+
+body.light-mode .experience-page .experience-container,
+body.light-mode .experience-page .experience-container * {
+  color: $text-primary-light !important;
+}
+
+body.dark-mode .experience-page .experience-container,
+body.dark-mode .experience-page .experience-container * {
+  color: $text-primary-dark !important;
 }

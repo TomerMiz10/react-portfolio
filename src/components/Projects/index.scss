@@ -1,3 +1,5 @@
+@use '@styles/variables' as *;
+
 .projects-page {
     width: 100%;
     min-height: 100vh;
@@ -38,7 +40,7 @@
                 }
             
                 h2 {
-                    color: #ffd700;
+                    color: $primary-color;
                     font-size: 1.8rem;
                     margin: 0;
                     text-align: center;
@@ -53,7 +55,7 @@
     
                 .tech-tag {
                     background: rgba(255, 215, 0, 0.1);
-                    color: #ffd700;
+                    color: $primary-color;
                     padding: 0.3rem 0.8rem;
                     border-radius: 15px;
                     font-size: 1.1rem;
@@ -79,12 +81,28 @@
                     transition: color 0.3s ease;
     
                     &:hover {
-                    color: #ffd700;
+                    color: $primary-color;
                     }
                 }
             }
         }
     }
+}
+
+body.light-mode .projects-page .projects-container .project-card .project-description p {
+  color: $text-primary-light !important;
+}
+
+body.dark-mode .projects-page .projects-container .project-card .project-description p {
+  color: $text-primary-dark !important;
+}
+
+body.light-mode .projects-page .projects-container .project-card .project-links a {
+  color: $text-primary-light !important;
+}
+
+body.dark-mode .projects-page .projects-container .project-card .project-links a {
+  color: $text-primary-dark !important;
 }
 
 

@@ -1,4 +1,4 @@
-@use '../../styles/variables' as *;
+@use '@styles/variables' as *;
 
 .skills-page {
     height: 100vh;
@@ -43,7 +43,7 @@
                 font-size: 1.5rem;
                 margin-bottom: 1rem;
                 padding-bottom: 0.5rem;
-                border-bottom: 2px solid #ffd700;
+                border-bottom: 2px solid $primary-color;
                 height: 35px;
                 display: flex;
                 align-items: center;
@@ -88,7 +88,15 @@
     }
 }
         
+body.light-mode .skills-page .skills-container .category-section .category-title,
+body.light-mode .skills-page .skills-container .category-section .skills-list .skill-item h3 {
+  color: $text-primary-light !important;
+}
 
+body.dark-mode .skills-page .skills-container .category-section .category-title,
+body.dark-mode .skills-page .skills-container .category-section .skills-list .skill-item h3 {
+  color: $text-primary-dark !important;
+}
 
 @media screen and (max-width: 1800px) {
     .skills-page .skills-container {

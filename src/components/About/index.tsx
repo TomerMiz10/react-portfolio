@@ -1,16 +1,16 @@
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import AnimatedLetters from '../AnimatedLetters';
 import './index.scss';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCss3, faGitAlt, faHtml5, faJsSquare, faReact } from '@fortawesome/free-brands-svg-icons';
-import Typescript_logo from '@assets/images/typescript-logo.png';
-console.log('Typescript_logo path:', Typescript_logo);
-
 import Loader from 'react-loaders';
+import { ThemeModeContext } from '@context/ThemeModeContext';
+import Cube from './Cube/Cube';
 
 const About = () => {
     const [letterClass, setLetterClass] = useState('text-animate');
     const aboutArray = ['A', 'b', 'o', 'u', 't', ' ', 'M', 'e'];
+
+    const themeContext = useContext(ThemeModeContext);
+    const isDarkMode = themeContext?.isDarkMode ?? false;
 
     useEffect(() => {
         const timeoutId = setTimeout(() => {
@@ -56,28 +56,7 @@ const About = () => {
                     </div>
                 </div>
 
-                <div className='stage-cube-cont'>
-                    <div className='cubespinner'>
-                        <div className='face1'>
-                            <FontAwesomeIcon icon={faHtml5} color='#e34c26' />
-                        </div>
-                        <div className="face2">
-                            <FontAwesomeIcon icon={faCss3} color="#28A4D9" />
-                        </div>
-                        <div className="face3">
-                            <FontAwesomeIcon icon={faJsSquare} color="#EFD81D" />
-                        </div>
-                        <div className="face4">
-                            <FontAwesomeIcon icon={faReact} color="#61DBFB" />
-                        </div>
-                        <div className="face5">
-                            <img  src={Typescript_logo} color="#007ACC" alt='Typescript'/>
-                        </div>
-                        <div className="face6">
-                            <FontAwesomeIcon icon={faGitAlt} color="#f1502f" />
-                        </div>
-                    </div>
-                </div>
+                <Cube isDarkMode={isDarkMode} />
             </div>
             <Loader type="pacman" active={true} />
         </>

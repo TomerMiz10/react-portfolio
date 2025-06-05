@@ -1,61 +1,63 @@
-.home-page {
-    .text-zone {
-        position: absolute;
-        left: 10%;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 40%;
-        max-height: 90%;
-    }
+@use '@styles/variables' as *;
 
-    h1 {
-        color: #fff;
-        font-size: 46px;
-        line-height: 53px;
-        margin: 0;
-        font-family: 'Coolvetica';
-        font-weight: 400;
-        
-        img {
-            margin-left: 0;
-            margin-right: -15px;
-            vertical-align: text-bottom;
-            opacity: 0;
-            width: 10%;
-            height: auto;
-            animation: rotateIn 1s linear both;
-            animation-delay: 1.4s;
-            filter: invert(60%) sepia(0%) saturate(0%) hue-rotate(247deg) brightness(93%) contrast(94%);
-        }
-    }
+.container.home-page {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 1200px;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding-left: ($sidebar-width)*0.8;
+    box-sizing: border-box;
+}
 
-    h2 {
-        color: #8d8d8d;
-        margin-top: 10px;
-        font-weight: 400;
-        font-size: 15px;
-        font-family: sans-serif;
-        letter-spacing: 3px;
-        animation: fadeIn 1s 1.8s backwards;
-    }
+.text-zone {
+    flex: 1 1 60%;
+    padding: 2rem 0;
+    position: static;
+    width: 60%;
+    margin: 0 auto;
+}
 
-    .flat-button {
-        color: #ffd700;
-        font-size: 15px;
-        font-weight: 400;
-        letter-spacing: 4px;
-        font-family: sans-serif;
-        text-decoration: none;
-        padding: 10px 18px;
-        border: 1px solid #ffd700;
-        margin-top: 25px;
-        float: left;
-        animation: fadeInAnimation 1s 1.8s backwards;
-        white-space: nowrap;
+h1 {
+    font-size: 4rem;
+    line-height: 1.2;
+    margin: 0;
+    font-family: 'Coolvetica', sans-serif;
+    font-weight: 400;
     
-        &:hover {
-            background: #ffd700;
-            color: #333;
-        }
+    img.logo {
+        margin-left: 0;
+        margin-right: -15px;
+        vertical-align: text-bottom;
+        width: 6rem;
+        height: auto;
+        animation: rotateIn 1s linear both;
+        animation-delay: 1s;
+        filter: invert(60%) sepia(0%) saturate(0%) hue-rotate(247deg) brightness(93%) contrast(94%);
     }
+}
+
+h2 {
+    color: #8d8d8d;
+    margin-top: 10px;
+    font-weight: 400;
+    font-size: 1.8rem;
+    font-family: sans-serif;
+    letter-spacing: 3px;
+}
+
+body.light-mode .home-page .text-zone h1 {
+    color: $text-primary-light;
+}
+body.light-mode .home-page .text-zone h2 {
+    color: $text-secondary-light;
+}
+body.dark-mode .home-page .text-zone h1 {
+    color: $text-primary-dark;
+}
+body.dark-mode .home-page .text-zone h2 {
+    color: $text-secondary-dark;
 }

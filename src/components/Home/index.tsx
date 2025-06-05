@@ -1,14 +1,16 @@
-import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import './index.scss';
 import LogoT from '../../assets/images/t-capital.png';
 import AnimatedLetters from '../AnimatedLetters';
 import Logo from './Logo/index.tsx';
+import { useScrollNavigation } from '@context/hooks/useScrollNavigation.ts';
 
 const Home = () => {
     const [letterClass, setLetterClass] = useState('text-animate');
     const nameArray = ['o', 'm', 'e', 'r', ' ', 'M', 'i', 'z', 'r', 'a', 'h', 'i'];
     const jobArray = ['a',' ', 'S', 'o', 'f', 't', 'w', 'a', 'r', 'e', ' ', 'E', 'n', 'g', 'i', 'n', 'e', 'e', 'r'];
+
+    const { scrollToSection } = useScrollNavigation();
 
     useEffect(() => {
         const timeoutId = setTimeout(() => {
@@ -34,7 +36,12 @@ const Home = () => {
 
                     </h1>
                     <h2>Full Stack | Backend | Frontend Developer</h2>
-                    <Link to="/contact" className="flat-button">CONTACT ME</Link>
+                    {/* <button
+                        className="flat-button"
+                        onClick={() => scrollToSection('contact')}
+                    >
+                        CONTACT ME
+                    </button> */}
                 </div>
                 <Logo />
             </div>

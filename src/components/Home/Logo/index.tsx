@@ -1,5 +1,5 @@
 import { useRef} from 'react';
-import LogoTM from '@assets/images/tm-logo.png';
+import LogoTM from '@assets/images/tomer-high-resolution-logo-transparent.png';
 import './index.scss';
 
 const Logo = () => {
