@@ -13,17 +13,3 @@ export type ColorOptions =
   | 'info'
   | 'light'
   | 'dark'
-
-export enum ScrollOptions {
-  HOME = 'home',
-  ABOUT = 'about',
-  SKILLS = 'skills',
-  PROJECTS = 'projects',
-  EXPERIENCE = 'experience',
-  CONTACT = 'contact',
-}
-
-export type NavItem = {
-  path: string
-  label: string
-}
