@@ -22,7 +22,6 @@
 }
 
 h1 {
-    color: #fff;
     font-size: 4rem;
     line-height: 1.2;
     margin: 0;
@@ -50,3 +49,15 @@ h2 {
     letter-spacing: 3px;
 }
 
+body.light-mode .home-page .text-zone h1 {
+    color: $text-primary-light;
+}
+body.light-mode .home-page .text-zone h2 {
+    color: $text-secondary-light;
+}
+body.dark-mode .home-page .text-zone h1 {
+    color: $text-primary-dark;
+}
+body.dark-mode .home-page .text-zone h2 {
+    color: $text-secondary-dark;
+}
