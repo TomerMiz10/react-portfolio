@@ -1,62 +1,62 @@
 @use '@styles/variables' as *;
 
 .logo-container {
-    z-index: 0;
-    width: 400px;  /* Reduced from 500px */
-    height: 600px; /* Reduced from 710px */
-    opacity: 0;
-    position: absolute;
-    top: 0;
-    right: 5%;     /* Changed from 15% to move more to the right */
+  flex: 1 1 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 350px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  position: relative;
+  animation: fadeIn 1s forwards;  
+
+  svg {
+    width: 100%;
+    height: auto;
     bottom: 0;
-    left: auto;
+    transform: rotateZ(5deg) !important;
+
+    path {
+      stroke-dasharray: 1000;
+      stroke-dashoffset: 1000;
+      stroke: #fff;
+      animation: draw 2s linear forwards, fadeIn 1s ease-in 2s forwards;
+      fill: none;
+    }
+  }
+
+  .solid-logo {
+    width: 100%;
+    height: auto;
+    z-index: 1; 
+    animation: fadeIn 2s forwards 2s;
+    position: relative;
     margin: auto;
-    animation: fadeIn 1s forwards;
-
-    svg {
-        width: 100%;
-        height: auto;
-        bottom: 0;
-        transform: rotateZ(5deg) !important;
-
-        path {
-            stroke-dasharray: 1000;
-            stroke-dashoffset: 1000;
-            stroke: #fff;
-            animation: draw 2s linear forwards, fadeIn 1s ease-in 2s forwards;
-            fill: none;
-        }
-      }
-    
-      .solid-logo {
-        position: absolute;
-        top: auto;
-        right: auto;
-        bottom: auto;
-        left: 0;
-        margin: auto;
-        width: 100%;
-        opacity: 0;
-        z-index: 1;
-        animation: fadeIn 2s forwards 2s;
-      }
+    display: block;
+  }
 }
 
 @keyframes draw {
   to {
-      stroke-dashoffset: 0;
+    stroke-dashoffset: 0;
   }
 }
 
 @keyframes fadeIn {
   to {
-      opacity: 1;
+    opacity: 1;
   }
 }
 
 @keyframes strokeColorChange {
-  0% { stroke: #fff; }
-  100% { stroke: $primary-color; }
+  0% {
+    stroke: #fff;
+  }
+  100% {
+    stroke: $primary-color;
+  }
 }
 
 path {

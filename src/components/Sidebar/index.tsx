@@ -1,4 +1,3 @@
-import { Link, NavLink } from 'react-router-dom';
 import './index.scss';
 import LogoT from '@assets/images/capital-T.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -14,65 +13,72 @@ import {
     faBriefcase,
     faCog,
   } from '@fortawesome/free-solid-svg-icons'
-import { applicationRoutes } from '../../utils/constants';
 import { useContext } from 'react';
 import { ThemeModeContext } from '@context/ThemeModeContext';
+import { useScrollNavigation } from '@context/hooks/useScrollNavigation';
+
 
 const Sidebar = () => {
     const themeContext = useContext(ThemeModeContext);
     if (!themeContext) {
         throw new Error('ThemeModeContext not found');
     }
-    const { isDarkMode, setIsDarkMode, theme } = themeContext; // get theme
+    const { isDarkMode, setIsDarkMode, theme } = themeContext;
+    const { scrollToSection, handleHomeClick } = useScrollNavigation();
+
 
     return (
         <div
             className='nav-bar'
             style={{ background: theme.navbarBg }} // use theme color
         >
-            <Link 
-                className='logo' 
-                to='/'>
+            <a className='logo' href='#home' onClick={handleHomeClick}>
                 <img className='logo' src={LogoT} alt='Logo'/>
-            </Link>
+            </a>
 
             <nav>
-                <NavLink 
-                    end 
+                <button
                     className="home-link"
-                    to='/' >
+                    onClick={handleHomeClick}
+                    aria-label="Home"
+                >
                     <FontAwesomeIcon icon={faHome} color={theme.textSecondary}/>
-                </NavLink>
-                <NavLink 
-                    end 
+                </button>
+                <button
                     className="about-link"
-                    to={applicationRoutes.about}>
+                    onClick={() => scrollToSection('about')}
+                    aria-label="About"
+                >
                     <FontAwesomeIcon icon={faUser} color={theme.textSecondary}/>
-                </NavLink>
-                <NavLink 
-                    end 
+                </button>
+                <button
                     className="skills-link"
-                    to={applicationRoutes.skills}>
+                    onClick={() => scrollToSection('skills')}
+                    aria-label="Skills"
+                >
                     <FontAwesomeIcon icon={faCog} color={theme.textSecondary}/>
-                </NavLink>
-                <NavLink 
-                    end 
+                </button>
+                <button
                     className="projects-link"
-                    to={applicationRoutes.projects}>
+                    onClick={() => scrollToSection('projects')}
+                    aria-label="Projects"
+                >
                     <FontAwesomeIcon icon={faProjectDiagram} color={theme.textSecondary}/>
-                </NavLink>
-                <NavLink 
-                    end 
+                </button>
+                <button
                     className="experience-link"
-                    to={applicationRoutes.experience}>
+                    onClick={() => scrollToSection('experience')}
+                    aria-label="Experience"
+                >
                     <FontAwesomeIcon icon={faBriefcase} color={theme.textSecondary}/>
-                </NavLink>
-                <NavLink 
-                    end 
+                </button>
+                <button
                     className="contact-link"
-                    to={applicationRoutes.contact}>
+                    onClick={() => scrollToSection('contact')}
+                    aria-label="Contact"
+                >
                     <FontAwesomeIcon icon={faEnvelope} color={theme.textSecondary}/>
-                </NavLink>
+                </button>
             </nav>
             <ul>
                 <li>
