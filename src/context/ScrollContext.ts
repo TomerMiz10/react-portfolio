@@ -1,9 +1,8 @@
 import { createContext } from 'react'
-import { ScrollOptions } from '../utils/types/types'
 
 type ScrollContextType = {
-  currentSection: ScrollOptions
-  setCurrentSection: (section: ScrollOptions) => void
+  currentSection: string
+  setCurrentSection: (section: string) => void
 }
 
 export const ScrollContext = createContext<ScrollContextType | undefined>(

@@ -1,13 +1,10 @@
 import React, { useState } from 'react'
 import { ScrollContext } from './ScrollContext'
-import { ScrollOptions } from '../utils/types/types';
 
 const ScrollProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
-  const [currentSection, setCurrentSection] = useState<ScrollOptions>(
-    ScrollOptions.HOME
-  )
+  const [currentSection, setCurrentSection] = useState<string>('home')
 
   return (
     <ScrollContext.Provider value={{ currentSection, setCurrentSection }}>
