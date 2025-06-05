@@ -18,6 +18,13 @@
       color: $primary-color;
     }
   }
+
+body.light-mode .text-animate-hover:hover {
+    color: $link-hover-color-light;
+}
+body.dark-mode .text-animate-hover:hover {
+    color: $link-hover-color-dark;
+}
   
   @for $i from 1 through 35 {
     .text-animate._#{$i} {
