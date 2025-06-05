@@ -1,7 +1,7 @@
 @use '@styles/variables' as *;
 
 .nav-bar {
-    width: 80px;
+    width: $sidebar-width;
     height: 100vh;
     position: fixed; 
     left: 0;         
